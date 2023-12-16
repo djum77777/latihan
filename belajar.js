@@ -89,7 +89,7 @@ console.log ("ambil data hobi aja dr object " +dataDiri.hobi);
 /* array deklarasi dgn []
 menyimpan data jenisnya sama misal kt simpan data merek mobil
 jadi kt usah deklarasi 1 persatu merek mobil dlm variable*/
-let merkMobil =["toyota","honda","nissan"]
+let merkMobil =["toyota","honda","nissan"];
 // jadi hampir sama sperti object ini bs kt panggil tp dlm bentuk indeks yg dimulai dr 0,1,2...
 
 console.log (merkMobil);
@@ -105,8 +105,10 @@ merkMobil.push("VOlvo");
 console.log (merkMobil);
 
 //untuk menambah lbh dari 1 merkMobil dgn fungsi push ..(PERLU LIAT ULANG RECORDING)!
-//merkMobil.push(..."mercy", "BMW");
-//console.log (merkMobil);
+merkMobil.push("mercy", "BMW");
+console.log ("contoh fungsi push menambah 2 jenis merk mobil ke array : " +merkMobil);
+merkMobil.pop();
+console.log ("contoh hapus 1 merk mobil plg belakang dr array yaitu BMW" +merkMobil);
 
 //manipulasi string
 let data = "nama saya mariana";
