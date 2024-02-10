@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css"> 
+    <title>Product Page</title>
+</head>
+<body>
+    <h1>OUR PRODUCT</h2>
+    <%- include('header') %> <!--manggil header.ejs yg kt buat-->
+    <p>Product List</p>
+    <ul>
+       <% if (products.length===0) { %>
+        <p>Data Produk Kosong</p>    
+        <% } else { %>
+            <% products.forEach((item)=>{ %>
+                <li> Product Name : <%= item.name  %> </li>
+                <li> Product Price : <%= item.price  %> </li>
+                <li> Product Stock : <%= item.Stock  %> </li>
+                <%})%>     
+        <% } %>
+
+    </ul>
+<%- include('footer')%>
+</body>
+</html>

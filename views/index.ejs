@@ -1,0 +1,25 @@
+<!-- format folder menampung file ejs harus pake nama VIEWS default dr EJS -->
+<!-- format file html xxxx.ejs krn menggunakan view engine ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementation of View Engine EJS</title>
+    <!--ngelink file css di ejs kt perlu taruh filenya di folder static public terus kt panggil sesuai pathnya-->
+    <link rel="stylesheet" href="./style/style.css"> 
+</head>
+<body>
+    <%- include('header') %> <!--manggil header.ejs yg kt buat-->
+    <h1 style="color: blueviolet;">Welcome to our site </h1>
+    <p class="judul"> We are adorable dog breeds <%=nama %></p>
+<!-- html akan membaca kode javascript view engine ejs dgn pengecekan tag <%= %> dan tag lainnya ssuai 
+keperluan bs di cek di https://ejs.co/ untuk lbh mudah drpd menghafal tag ejs kt bs install file support 
+ejs melalui extension vs code "EJS SUPPORT LANGUAGE" -->
+
+<!--ngelink file image di ejs kt perlu taruh filenya di folder static public terus kt panggil sesuai pathnya-->
+<img class="img-judul" src="./img/dogs.jpg">
+<%- include('footer')%>
+</body>
+</html>
+
