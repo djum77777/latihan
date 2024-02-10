@@ -7,3 +7,10 @@ h1 {background-color: aquamarine;}
     font-weight: bold;
 }
 .img-judul{width: 300px;}
+.formatForm
+{
+    background-color: aqua;
+    color:blueviolet;
+    font-size: 25px;
+    font-weight: bold;
+}
