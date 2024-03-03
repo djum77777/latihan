@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css"> 
+    <title>Product Page</title>
+</head>
+<body>
+    <h1>OUR Transaction</h2>
+    <%- include('header') %> <!--manggil header.ejs yg kt buat-->
+    <p>Transaction List</p>
+    <ul>
+       <% if (transaction.length===0) { %>
+        <p>Data Transaction Kosong</p>    
+        <% } else { %>
+            <% transaction.forEach((item)=>{ %>
+                <li> Cust Name : <%= item.name  %> </li>
+                <li> Product Name : <%= item.product  %> </li>
+                <li> Price : <%= item.price  %> </li>
+                <li> Quantity : <%= item.qty  %> </li>
+                <li> Total : <%= item.total  %> </li>
+                <hr>
+                <%})%>     
+        <% } %>
+    </ul>
+<%- include('footer')%> <!--manggil footer-->
+</body>
+</html>

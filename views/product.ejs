@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Product Page</title>
 </head>
 <body>
@@ -11,16 +12,26 @@
     <%- include('header') %> <!--manggil header.ejs yg kt buat-->
     <p>Product List</p>
     <ul>
-       <% if (products.length===0) { %>
+       <% if (product.length===0) { %>
         <p>Data Produk Kosong</p>    
         <% } else { %>
-            <% products.forEach((item)=>{ %>
-                <li> Product Name : <%= item.name  %> </li>
-                <li> Product Price : <%= item.price  %> </li>
-                <li> Product Stock : <%= item.Stock  %> </li>
+            <% product.forEach((item)=>{ %>
+            <div onclick="redirectDetailProduct(<%=item.id%>)">
+                <li>Name : <%= item.name  %></li>
+                <li> Price : <%= item.price  %> </li>
+                <li> Store Name : <%= item.toko  %> </li>
+                <hr>
+            </div>
                 <%})%>     
         <% } %>
     </ul>
 <%- include('footer')%> <!--manggil footer-->
+<script>
+    //console.log("klik",typeof(id))
+    function redirectDetailProduct(id)
+    {
+        window.location.href='/productdetail/'+id
+    }
+</script>
 </body>
 </html>

@@ -11,17 +11,27 @@
     <p class="formatForm">PRODUCT FORM</p>
     <form action="/add-product" method="post">
     <div>
-        <label for="Name">Product Name :</label><br>
-        <input type="text" id="productName" name="name"><br>
+        <label for="name" name="name">Product Name :</label><br>
+        <input type="text" id="name" name="name"><br>
     </div>
     <div>
         <label for="Price">Product Price :</label><br>
-        <input type="number" id="productPrice" name="price"><br>
+        <input type="number" id="price" name="price"><br>
     </div>
     <div>
         <label for="Stock">Stock Unit :</label><br>
-        <input type="number" id="stockUnit" name="stock"><br>
+        <input type="number" id="stock" name="stock"><br>
     </div>
+    <div>
+        <label for ="store_id" name="store_id">Store Name</label>
+        <select id="store_id" name="store_id">
+            <option value="1">Toko Mariana</option>
+            <option value="2">Toko Amin</option>
+            <option value="3">Toko Dede</option>
+            <option value="4">Toko Erni</option>
+            <option value="5">Toko Rudy</option>
+        </select>
+    </div> 
     <button type="submit">ADD</button>
     </form>
     <ul>

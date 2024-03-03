@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Engine Member</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <h1>OUR CUSTOMER</h2>
+    <%- include('header') %> <!--manggil header.ejs yg kt buat-->
+    <h2 style="color: blue;">Data Customer</h2>
+    <ul>
+        <% if (customer.length===0) { %>
+         <p>Data Customer Kosong</p>    
+         <% } else { %>
+             <% customer.forEach((item)=>{ %>
+                 <li> Name : <%= item.name  %> </li>
+                 <li> Email : <%= item.email  %> </li>
+                <hr>
+                 <%})%>     
+         <% } %>
+     </ul>
+<%-include('footer')%> <!--manggil footer--> 
+</body>
+</html>

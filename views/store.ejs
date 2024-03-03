@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css"> 
+    <title>Product Page</title>
+</head>
+<body>
+    <h1>STORE</h2>
+    <%- include('header') %> <!--manggil header.ejs yg kt buat-->
+    <p>Store List</p>
+    <ul>
+       <% if (store.length===0) { %>
+        <p>Data Store Kosong</p>    
+        <% } else { %>
+            <% store.forEach((item)=>{ %>
+                <li> Name : <%= item.name  %> </li>
+                <li> Address : <%= item.address  %> </li>
+                <hr>
+                <%})%>     
+        <% } %>
+    </ul>
+<%- include('footer')%> <!--manggil footer-->
+</body>
+</html>
