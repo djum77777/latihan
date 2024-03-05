@@ -9,31 +9,29 @@
 <body>
     <%- include('header') %>
     <p class="formatForm">PRODUCT FORM</p>
-    <!--untuk panggil router post add-product -->
-    <form action="/add-product" method="post">
+    <form action="/editProduct/<%= product.id %>" method="POST">
     <div>
-        <label for="name" name="name">Product Name :</label><br>
-        <input type="text" id="name" name="name"><br>
+        <label for="name" name="name" >Product Name :</label><br>
+        <input type="text" id="name" name="name" value="<%=product.name%>"><br>
     </div>
     <div>
         <label for="Price">Product Price :</label><br>
-        <input type="number" id="price" name="price"><br>
+        <input type="number" id="price" name="price" value="<%=product.price%>"><br>
     </div>
     <div>
         <label for="Stock">Stock Unit :</label><br>
-        <input type="number" id="stock" name="stock"><br>
+        <input type="number" id="stock" name="stock" value="<%=product.stock%>"><br>
     </div>
     <div>
         <label for ="store_id" name="store_id">Store Name</label>
         <select id="store_id" name="store_id">
-            <option value="1">Toko Mariana</option>
-            <option value="2">Toko Amin</option>
-            <option value="3">Toko Dede</option>
-            <option value="4">Toko Erni</option>
-            <option value="5">Toko Rudy</option>
+            <option value="">Select Store</option>
+            <% store.forEach((item)=>{ %>
+            <option value="<%=item.id%>"><%=item.name%></option>
+            <%})%> 
         </select>
     </div> 
-    <button type="submit">ADD</button>
+    <button type="submit">EDIT</button>
     </form>
     <ul>
     <%- include('footer') %>

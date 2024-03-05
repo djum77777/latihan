@@ -20,7 +20,11 @@
                 <li>Name : <%= item.name  %></li>
                 <li> Price : <%= item.price  %> </li>
                 <li> Store Name : <%= item.toko  %> </li>
+                </div>
+                <a href="/editProduct/<%=item.id%>">edit</a> 
+                <a href="#">delete</a>
                 <hr>
+                </div>
             </div>
                 <%})%>     
         <% } %>
