@@ -41,3 +41,10 @@ exports.editProduct=(id,saveProduct)=> //update produk ambil 2 parameter, 1 id p
 {
     return knex('product').where('product.id',id).update(saveProduct)
 }
+
+exports.deleteProduct=async(id)=>
+{
+    console.log(`ini idnya lagi yah : ${id}`);
+    let delData=await knex('product').where('id',id).del()
+    console.log('data hapus',delData);
+}

@@ -1,7 +1,7 @@
 const express = require ('express');
 const getHello = require('../controllers');
 const getStore = require('../controllers/store');
-const {getProduct,addProduct, productByID, updateProduct} = require('../controllers/product');
+const {getProduct,addProduct, productByID, updateProduct, productDelete} = require('../controllers/product');
 const getForm = require('../controllers/form');
 const { findProductByID } = require('../models/productModel');
 const { findStore } = require('../models/storemodel');
@@ -13,6 +13,7 @@ router.get('/product',getProduct)
 router.post('/add-product',addProduct)
 router.post('/editProduct/:id',updateProduct)
 router.get('/productdetail/:id',productByID)
+router.get('/deleteProduct/:id',productDelete)
 //panggil hlmn getform
 router.get('/form',getForm)
 

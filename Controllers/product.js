@@ -1,4 +1,4 @@
-const { findProduct, createProduct, findProductByID, editProduct } = require("../models/productModel");
+const { findProduct, createProduct, findProductByID, editProduct, deleteProduct } = require("../models/productModel");
 
 //untuk tampilin halaman produk
 const getProduct=async(req,res)=>
@@ -61,7 +61,7 @@ const updateProduct=async(req,res)=>
         }
         console.log('test ',ID,saveProduct);
         const product=await editProduct(ID,saveProduct);
-        res.redirect('product') //untuk balik ke hlmn produk stlh di add produk
+        res.redirect('/product') //untuk balik ke hlmn produk stlh di add produk
         
     } catch (error) {
         console.log(error);
@@ -69,4 +69,18 @@ const updateProduct=async(req,res)=>
     }
     
 }
-module.exports={getProduct,addProduct,productByID,updateProduct}
+
+const productDelete=async(req,res)=>
+{
+    console.log(`ini idnya :${req.params.id}`);
+    try {
+        const id=req.params.id
+        const product= await deleteProduct(id);
+        res.redirect('/product') //untuk balik ke hlmn produk stlh di add produk
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('server ada error')
+    }
+}
+
+module.exports={getProduct,addProduct,productByID,updateProduct,productDelete}
