@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modified Images</title>
+  <style>
+    /* modified w & h 300px the img will strecth to fit the w&h*/
+    .thumbnail1{
+      width: 300px;
+      height: 300px;
+    }
+    /* modified w & h 300px with object fit : */
+    .thumbnail2{
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .thumbnail3{
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <img class="thumbnail1" src="/YT Project/thumbnails/thumbnail-1.webp">
+  <p style="font-size: 10px;">example of image using w&h 300px x 300px</p>
+</div>
+<div>
+  <img class="thumbnail2" src="/YT Project/thumbnails/thumbnail-1.webp">
+  <p style="font-size: 10px;">
+    example of image using w&h 300px x 300px & object-fit : cover <br> 
+    will make the image strecthed propositional to fit 300x300 frame
+  </p>
+  <div>
+    <img class="thumbnail3" src="/YT Project/thumbnails/thumbnail-1.webp">
+    <p style="font-size: 10px;">
+      example of image using w&h 300px x 300px & object-fit : contain <br> 
+      will make the image propositional to fit 300x300 frame but not to cover the entire area
+    </p>
+</div>
+<br>
+<p style="font-size: 10px;">
+  for more complete properties of image, we can refers to w3schools link here <a href="https://www.w3schools.com/css/css3_images.asp">image css </a> and  <a href="https://www.w3schools.com/html/html_images.asp">image html </a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display property</title>
+  <style>
+    body{
+      font-size: 10px;
+    }
+    .block,.thumbnail,.input{
+      border-width: 2px;
+      border-color: red;
+      border-style: solid;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    there is 3 types of display in html :
+    <ul>
+      1. block : will take the whole line 
+      ex: paragraph, eventhough our sentences only several words it will take the whole line space
+    </ul>
+    <ul>
+      2. inline block : will only take according to spaces it need too,. 
+      ex : image
+    </ul>
+    <ul>
+      3. inline element : additional element that we can put inside an element.
+      ex : inside paragraph element, we put a <strong>word</strong> to modified certain words.
+    </ul>
+  </p>
+<p class="block"> this is block element and will use all the entire line space</p>
+
+<img style="width: 300px;" class="thumbnail" src="/YT Project/thumbnails/thumbnail-1.webp">
+<input class="input" type="text" placeholder="input here">
+<p> example above is the inline block that other left spaces can be use by other elements <strong>and this is inline element</strong> </p>
+
+<p>
+  to change the element we can use "display property"
+  <br> display : inline-block
+  <br> display: block
+  or we can refer to <a href="https://www.w3schools.com/cssref/pr_class_display.php">here</a>  for more display properties
+</p>
+</body>
+</html>

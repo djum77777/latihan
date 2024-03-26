@@ -1,0 +1,94 @@
+.subscribe-button{
+    background-color:rgb(200, 0, 0);
+    color:white;
+    border:none;
+    /* padding value : clockwise top right bottom left*/
+    padding:10px 16px 10px 16px;
+    border-radius: 2px;
+    cursor:pointer; 
+    /*make the pointer become handpointer when hover on the button*/
+    margin-right: 10px; /*make right space 8px to join button */
+    /*make the transition smoothly from here to hover which is opacity*/
+    transition: opacity 0.15s;
+    /* align subscribe button to top */
+    vertical-align: top;
+}
+/* when the button being hover on*/
+.subscribe-button:hover{
+  opacity:0.8;
+}
+ /* when the button being clicked*/
+.subscribe-button:active{
+  opacity: 0.5;
+}
+
+.join-button{
+  background-color: white;
+  color:rgb(10, 10, 253);
+  border-color:rgb(10, 10, 253);
+  border-style: solid; /*make the whole border color without shadow*/
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+  padding:8px 15px 8px 15px;
+  /*make the transition smoothly from here to hover 
+  which is bckground color and text color,according to our hover property */
+  transition: background-color 0.15s, color 0.15s;
+}
+.join-button:hover{
+    background-color:rgb(10, 10, 253);
+    color: white;
+}
+.join-button:active{
+    opacity: 0.7;
+}
+
+.tweet-button{
+    background-color: rgb(29, 155, 240);
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    border:none;
+    border-radius: 20px;
+    padding:10px 15px 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: box-shadow 0.15s;
+}
+.tweet-button:hover{
+    /* box-shadow value : x y blur color*/
+    /* rgba : r g b opacity*/
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uber-button{
+    background-color: black;
+    color:white;
+    border-style: solid;
+    border-radius: 2px;
+    height: 36px;
+    width: 110px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.amazon-button{
+    background-color: rgb(255, 216, 20);
+    color:black;
+    border:none;
+    border-radius: 15px;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.github-button{
+    background-color: rgb(46,164,79);
+    color:white;
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 36px;
+    width: 80px;
+    cursor: pointer;
+    margin-right: 10px;
+}
